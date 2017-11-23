@@ -2,6 +2,13 @@ import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
 import axios from "axios"
+import * as R from "ramda"
+import PropTypes from "prop-types"
+
+// string template / literal
+// const a = "asdfas"
+// const y = "asd" + a + "fas"
+// const x = 'asds${a}fas'
 
 function Card(props) {
     return (
@@ -16,8 +23,13 @@ function Card(props) {
     )
 }
 
+Card.propTypes = {
+    name: PropTypes.string.isRequired,
+}
+
 function CardList(props) {
-    return <div>{props.cards.map(card => <Card {...card} />)}</div>
+    // return <div>{props.cards.map(card => <Card {...card} />)}</div>
+    return <div>{R.map(card => <Card {...card} />, props.cards)}</div>
 }
 
 class App extends Component {
@@ -51,6 +63,7 @@ class App extends Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault()
         const value = this.state.value
         axios.get(`https://api.github.com/users/${value}`).then(res => {
             const infor = res.data
@@ -66,7 +79,6 @@ class App extends Component {
                 ]),
             })
         })
-        event.preventDefault()
     }
 
     handleClick = () => {

@@ -1,0 +1,142 @@
+Last login: Mon Nov 20 19:13:11 on ttys002
+ houjingye@houkeis-MacBook-Pro  ~  cd Google\ Drive
+ houjingye@houkeis-MacBook-Pro  ~/Google Drive  cd zhaozheHomework
+ houjingye@houkeis-MacBook-Pro  ~/Google Drive/zhaozheHomework  cd ReactPractice
+ houjingye@houkeis-MacBook-Pro  ~/Google Drive/zhaozheHomework/ReactPractice   master ●  cd hello-world
+ houjingye@houkeis-MacBook-Pro  ~/Google Drive/zhaozheHomework/ReactPractice/hello-world   master ●  yarn add surge
+yarn add v1.3.2
+[1/4] 🔍  Resolving packages...
+warning surge > tar.gz@0.1.1: ⚠️  WARNING ⚠️ tar.gz module has been deprecated and your application is vulnerable. Please use tar module instead: https://npmjs.com/tar
+warning surge > fstream-ignore > minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+warning surge > request > node-uuid@1.4.8: Use uuid module instead
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 📃  Building fresh packages...
+success Saved lockfile.
+success Saved 33 new dependencies.
+├─ asn1@0.1.11
+├─ aws-sign2@0.5.0
+├─ boom@0.4.2
+├─ colors@0.6.2
+├─ ctype@0.5.3
+├─ cycle@1.0.3
+├─ du@0.1.0
+├─ eyes@0.1.8
+├─ form-data@0.1.4
+├─ fstream-ignore@1.0.2
+├─ http-signature@0.10.1
+├─ i@0.3.6
+├─ is-domain@0.0.1
+├─ keypress@0.1.0
+├─ moniker@0.1.2
+├─ natives@1.1.0
+├─ ncp@0.4.2
+├─ netrc@0.1.4
+├─ node-uuid@1.4.8
+├─ pkginfo@0.4.1
+├─ progress@1.1.8
+├─ prompt@0.2.14
+├─ read@1.0.5
+├─ request@2.40.0
+├─ revalidator@0.1.8
+├─ split@0.3.1
+├─ stack-trace@0.0.10
+├─ surge-ignore@0.2.0
+├─ surge@0.19.0
+├─ tar.gz@0.1.1
+├─ url-parse-as-address@1.0.0
+├─ utile@0.2.1
+└─ winston@0.8.3
+✨  Done in 7.07s.
+ houjingye@houkeis-MacBook-Pro  ~/Google Drive/zhaozheHomework/ReactPractice/hello-world   master ●  yarn deploy
+yarn run v1.3.2
+$ yarn run build && surge -p build -d your-domain.surge.sh
+$ react-scripts build
+Creating an optimized production build...
+Compiled with warnings.
+
+./src/App.js
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  49.98 KB  build/static/js/main.576f86c4.js
+  299 B     build/static/css/main.c17080f1.css
+
+The project was built assuming it is hosted at the server root.
+To override this, specify the homepage in your package.json.
+For example, add this to build it for GitHub Pages:
+
+  "homepage" : "http://myname.github.io/myapp",
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+
+    Welcome to Surge! (surge.sh)
+    Please login or create an account by entering your email and password:
+
+              email: jingyehou@yahoo.com
+           password:
+       project path: build
+               size: 10 files, 1.5 MB
+             domain: your-domain.surge.sh
+
+    Aborted - you do not have permission to publish to your-domain.surge.sh
+
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+ ✘ houjingye@houkeis-MacBook-Pro  ~/Google Drive/zhaozheHomework/ReactPractice/hello-world   master ●  yarn deploy
+yarn run v1.3.2
+$ yarn run build && surge -p build -d jingyehou.surge.sh
+$ react-scripts build
+Creating an optimized production build...
+Compiled with warnings.
+
+./src/App.js
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  49.98 KB  build/static/js/main.576f86c4.js
+  299 B     build/static/css/main.c17080f1.css
+
+The project was built assuming it is hosted at the server root.
+To override this, specify the homepage in your package.json.
+For example, add this to build it for GitHub Pages:
+
+  "homepage" : "http://myname.github.io/myapp",
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+
+    Surge - surge.sh
+
+              email: jingyehou@yahoo.com
+              token: *****************
+       project path: build
+               size: 10 files, 1.5 MB
+             domain: jingyehou.surge.sh
+             upload: [==========] 100%, eta: 0.0s
+   propagate on CDN: [===============] 100%
+               plan: Free
+              users: jingyehou@yahoo.com
+         IP Address: 45.55.110.124
+
+    Success! Project is published and running at jingyehou.surge.sh
+
+✨  Done in 15.30s.
+ houjingye@houkeis-MacBook-Pro  ~/Google Drive/zhaozheHomework/ReactPractice/hello-world   master ● 
