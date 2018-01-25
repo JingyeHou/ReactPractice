@@ -1,8 +1,8 @@
-// import React, { Component } from "react"
-// import logo from "./logo.svg"
-// import "./App.css"
-// import axios from "axios"
-// import * as R from "ramda"
+import React, { Component } from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import axios from "axios"
+import * as R from "ramda"
 //
 // function Todo(props) {
 //     function handleClick() {
@@ -117,41 +117,35 @@
 //
 // export default App
 
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
-import axios from "axios"
-import * as R from "ramda"
-
 class Todo extends Component {
     render() {
         return (
             <div style={{ margin: "1em" }}>
-                <div style={{ display: "inline-block", marginLeft: 10 }}>
+                <li style={{ display: "inline-block", marginLeft: 10 }}>
                     <button onClick={this.props.onClick}>
                         {this.props.text}
                     </button>
                     <div style={{ fontSize: "1.25em", fontWeight: "bold" }} />
-                </div>
+                </li>
             </div>
         )
     }
 }
 
-function TodoList(props) {
+const TodoList = props => {
     return (
-        <div>
+        <ul>
             {R.map(
                 todo => (
                     <Todo {...todo} onClick={props.onClick} ref={props.idRef} />
                 ),
                 props.list,
             )}
-        </div>
+        </ul>
     )
 }
 
-function Form(props) {
+const Form = props => {
     return (
         <div>
             <form onSubmit={props.onSubmit}>
@@ -178,7 +172,7 @@ class App extends Component {
         axios
             .get(`https://5a1709c8df32450012ff4736.mockapi.io/ShoppingList`)
             .then(res => {
-                this.setState({ lists: R.map(obj => obj, res.data) })
+                this.setState({ lists: res.data })
             })
     }
 
